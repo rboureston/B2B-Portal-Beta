@@ -1,0 +1,11 @@
+{{template "header" .}}
+
+{{define "title"}}Login{{end}}
+
+{{if .IsAuthenticated}}
+    <script type="text/javascript" src="https://form.jotform.com/jsform/222064000723035"></script>
+{{else}}
+<h2> Must Authenticate First! </h2>
+{{end}}
+
+{{template "footer"}}

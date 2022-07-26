@@ -1,0 +1,15 @@
+{{template "header" .}}
+
+{{define "title"}}Login{{end}}
+
+{{if .IsAuthenticated}}
+<h2>  Beta Org Information </h2>
+    
+    Insert Table here with Tenant information
+   
+     
+{{else}}
+<h2> Must Authenticate First! </h2>
+{{end}}
+
+{{template "footer"}}

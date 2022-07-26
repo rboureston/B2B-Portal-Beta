@@ -1,0 +1,14 @@
+{{template "header" .}}
+
+{{define "title"}}Login{{end}}
+
+ This portal has all the information you need for Okta's Sign-In Widget Beta Program.
+{{if .IsAuthenticated}}   
+<p>Welcome back, <span>{{.Profile.name}}</span>!</p>
+   
+     
+{{else}}
+    <h2> Must Authenticate First! </h2>
+{{end}}
+
+{{template "footer"}}

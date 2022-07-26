@@ -1,0 +1,15 @@
+{{template "header" .}}
+
+{{define "title"}}Login{{end}}
+
+{{if .IsAuthenticated}}
+<h2> Contact Us</h2>
+    
+    
+   
+     
+{{else}}
+<h2> Must Authenticate First! </h2>
+{{end}}
+
+{{template "footer"}}
