@@ -3,7 +3,12 @@
 {{define "title"}}Login{{end}}
 
 {{if .IsAuthenticated}}
-    <script type="text/javascript" src="https://form.jotform.com/jsform/222064000723035"></script>
+    {{template "sidebar" .}}
+            <div class="col-md-10 col-sm-8 main-content" >
+                <!--Main content code to be written here -->
+                     <script type="text/javascript" src="https://form.jotform.com/jsform/222064000723035"></script> 
+            </div>
+        </div>
 {{else}}
 <h2> Must Authenticate First! </h2>
 {{end}}

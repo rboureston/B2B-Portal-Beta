@@ -2,11 +2,15 @@
 
 {{define "title"}}Login{{end}}
 
- This portal has all the information you need for Okta's Sign-In Widget Beta Program.
-{{if .IsAuthenticated}}   
-<p>Welcome back, <span>{{.Profile.name}}</span>!</p>
-   
-     
+{{if .IsAuthenticated}}
+    {{template "sidebar" .}}
+            <div class="col-md-10 col-sm-8 main-content" >
+                <!--Main content code to be written here -->
+                <p>Welcome back, <span>{{.Profile.name}}</span>!</p>
+                 This portal has all the information you need for Okta's Sign-In Widget Beta Program.
+
+            </div>
+        </div>
 {{else}}
     <h2> Must Authenticate First! </h2>
 {{end}}
