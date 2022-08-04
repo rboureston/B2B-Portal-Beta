@@ -1,18 +1,18 @@
 {{template "header" .}}
 
-{{define "title"}}Login{{end}}
+{{define "title"}}Home{{end}}
 
-{{if .IsAuthenticated}}
-    {{template "sidebar" .}}
-            <div class="col-md-10 col-sm-8 main-content" >
-                <!--Main content code to be written here -->
-                <p>Welcome back, <span>{{.Profile.name}}</span>!</p>
-                 This portal has all the information you need for Okta's Sign-In Widget Beta Program.
-
-            </div>
+<div class="container">
+    {{if .IsAuthenticated}}
+        {{template "sidebar" .}}
+        <div class="col-md-10 col-sm-8 main-content" >
+            <!--Main content code to be written here -->
+            <p>Welcome back, <span>{{.Profile.name}}</span>!</p>
+            <p>Thanks for participating in the Sign-In Widget beta program. This portal has information to help you test.</p>
         </div>
-{{else}}
-    <h2> Must Authenticate First! </h2>
-{{end}}
+    {{else}}
+        {{template "unauthenticated" .}}
+    {{end}}
+</div>
 
 {{template "footer"}}

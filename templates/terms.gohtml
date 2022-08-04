@@ -2,15 +2,18 @@
 
 {{define "title"}}Login{{end}}
 
-{{if .IsAuthenticated}}
- {{template "sidebar" .}}
-            <div class="col-md-10 col-sm-8 main-content" >
-                <!--Main content code to be written here -->
-                 <script type="text/javascript" src="https://form.jotform.com/jsform/222075149814052"></script>
-            </div>
+<div class="container">
+    {{if .IsAuthenticated}}
+        {{template "sidebar" .}}
+        <div class="col-md-10 col-sm-8 main-content" >
+            <!--Main content code to be written here -->
+            <script type="text/javascript" src="https://form.jotform.com/jsform/222075149814052"></script>
         </div>
-{{else}}
-<h2> Must Authenticate First! </h2>
-{{end}}
+    {{else}}
+        <div class="main-content">
+            <p><a href='/login'>Sign in</a> to access the beta program resources.</p>
+        </div>
+    {{end}}
+</div>
 
 {{template "footer"}}

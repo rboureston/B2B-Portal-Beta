@@ -1,7 +1,7 @@
 {{template "header" .}}
-<main>
 
-{{define "title"}}Login{{end}}
+{{define "title"}}Sign In{{end}}
+<div class="main-content">
 
 <div id="okta-signin-widget-container"></div>
 <script type="text/javascript">
@@ -52,5 +52,7 @@
       console.log('Error in showSignInAndRedirect: ', err);
     });
 </script>
+
+</div>
 
 {{template "footer"}}
