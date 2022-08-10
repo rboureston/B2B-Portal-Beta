@@ -1,13 +1,27 @@
 {{template "header" .}}
 
-{{define "title"}}Login{{end}}
+{{define "title"}}FAQ{{end}}
 
 <div class="container">
     {{if .IsAuthenticated}}
         {{template "sidebar" .}}
         <div class="col-md-10 col-sm-8 main-content" >
             <!--Main content code to be written here -->
-            <h2>Contact Us</h2>
+            <h2>Frequently asked questions</h2>
+            <p>Coming soon</p>
+            <!--
+            How does the beta program work?
+            How long does the beta program last?
+            How do I join the beta program?
+            What are the requirements of the beta program?
+            What should I test?
+            How do I test?
+            How do I report an issue that I found?
+            Will you let me know when you fix my issue?
+            How can I contact Okta/the beta team?
+            How can I give feedback about the beta program?
+            I'm having issues. Where can I get help?
+            -->
         </div>
     {{else}}
         {{template "unauthenticated" .}}

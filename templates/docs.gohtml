@@ -1,13 +1,14 @@
 {{template "header" .}}
 
-{{define "title"}}Login{{end}}
+{{define "title"}}What to test{{end}}
 
 <div class="container">
     {{if .IsAuthenticated}}
         {{template "sidebar" .}}
         <div class="col-md-10 col-sm-8 main-content" >
             <!--Main content code to be written here -->
-            Beta Doc here soon
+            <h2>What to test</h2>
+            <p>Coming soon</p>
         </div>
     {{else}}
         {{template "unauthenticated" .}}

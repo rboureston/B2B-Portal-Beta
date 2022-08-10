@@ -36,6 +36,8 @@
     --ColorTextSub: var(--ColorPaletteNeutral600);
     --ColorTextDanger: var(--ColorPaletteRed500);
 
+    --FontSizeCaption: 0.857rem;
+
     --SpaceScale0: 0.28571429rem;
     --SpaceScale1: 0.57142857rem;
     --SpaceScale2: 0.85714286rem;
@@ -129,7 +131,7 @@ header h1 {
 
 header a,
 header a:visited {
-    color: var(--ColorPaletteNeutralWhite);
+    color: var(--ColorTextBodyInverse);
     text-decoration: none;
 }
 
@@ -141,13 +143,20 @@ header .auth-link {
     float: right;
 }
 
+header .profile-name {
+    margin-right: var(--SpaceScale2);
+    color: var(--ColorTextBodyInverse);
+    opacity: 0.8;
+}
+
 .container {
     display: flex;
 }
 
 .page-nav {
+    flex-shrink: 0;
     width: 20ch;
-    padding: var(--SpaceScale4) 0;
+    padding: var(--SpaceScale8) 0;
 }
 
 .page-nav ul {
@@ -179,4 +188,46 @@ header .auth-link {
 .main-content {
     flex-grow: 1;
     padding: var(--SpaceScale4);
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: var(--SpaceScale4) 0;
+}
+
+.card-list .card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    width: 36ch;
+}
+
+.card-list .card a {
+    display: block;
+    margin: 0 var(--SpaceScale2) var(--SpaceScale2) 0;
+    padding: var(--SpaceScale2);
+    text-decoration: none;
+    border: 1px solid var(--ColorPaletteNeutral200);
+    border-radius: 4px;
+}
+
+.card-list .card .ordinal {
+    display: inline-block;
+    width: var(--SpaceScale4);
+    height: var(--SpaceScale4);
+    margin-right: var(--SpaceScale0);
+    padding-top: 4px;
+    font-size: var(--FontSizeCaption);
+    text-align: center;
+    color: var(--ColorTextBodyInverse);
+    background-color: var(--ColorTextBody);
+    border-radius: 100%;
+}
+
+.card-list .card a:hover .title {
+    text-decoration: underline;
 }
