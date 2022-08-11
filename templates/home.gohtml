@@ -7,8 +7,30 @@
         {{template "sidebar" .}}
         <div class="col-md-10 col-sm-8 main-content" >
             <!--Main content code to be written here -->
-            <p>Welcome back, <span>{{.Profile.name}}</span>!</p>
-            <p>Thanks for participating in the Sign-In Widget beta program. This portal has information to help you test.</p>
+            <h2>Welcome</h2>
+            <p>Thanks for participating in the Sign-in Widget beta program. Here you can learn about the beta, submit issues, and more.</p>
+            <ol class="card-list">
+                <li class="card">
+                    <a href='/terms'>
+                        <span class="ordinal">1</span>
+                        <span class="title">Sign your beta agreement &rarr;</span>
+                    </a>
+                </li>
+                <li class="card">
+                    <a href='/docs'>
+                        <span class="ordinal">2</span>
+                        <span class="title">Learn how to test &rarr;</span>
+                    </a>
+                </li>
+                <li class="card">
+                    <a href='/issues'>
+                        <span class="ordinal">3</span>
+                        <span class="title">Submit issues &rarr;</span>
+                    </a>
+                </li>
+            </ol>
+            <h3>Contact us</h3>
+            <p>If you have questions or need support, get in touch with the Sign-in Widget beta team in the <strong>#siw-beta-customers</strong> Slack channel or directly to <strong>deepa.mahalingam@okta.com</strong>.</p>
         </div>
     {{else}}
         {{template "unauthenticated" .}}

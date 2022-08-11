@@ -21,10 +21,11 @@
 <body>
     <header>
         <h1>
-            <a href='/'><img src="/static/img/okta.svg" width="48" height="16" alt="Okta" class="logo">Sign-In Widget Beta Portal</a>
+            <a href='/'><img src="/static/img/okta.svg" width="48" height="16" alt="Okta" class="logo">Sign-in Widget Beta Portal</a>
         </h1>
         <div class="auth-link">
             {{if .IsAuthenticated}}
+                <span class="profile-name">{{.Profile.name}}</span>
                 <a href='/logout'>Sign out</a>
             {{else}}
                 <a href='/login'>Sign in</a>
