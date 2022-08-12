@@ -5,6 +5,7 @@ go 1.14
 require (
 	github.com/cucumber/godog v0.11.0
 	github.com/cucumber/messages-go/v10 v10.0.3
+	github.com/gomarkdown/markdown v0.0.0-20220731190611-dcdaee8e7a53
 	github.com/gorilla/mux v1.8.0
 	github.com/gorilla/sessions v1.2.1
 	github.com/okta/okta-idx-golang v0.2.3-0.20220211190246-75f2bf55928c

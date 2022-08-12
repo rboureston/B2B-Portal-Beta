@@ -1,0 +1,16 @@
+
+{{template "header" .}}
+
+{{define "title"}}FAQ{{end}}
+<div class="container">
+    {{if .IsAuthenticated}}
+        {{template "sidebar" .}}
+        <div class="col-md-10 col-sm-8 main-content" >
+             {{ .Output }} 
+        </div>
+    {{else}}
+        {{template "unauthenticated" .}}
+    {{end}}
+</div>
+
+{{template "footer"}}

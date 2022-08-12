@@ -29,6 +29,8 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gomarkdown/markdown"
+	"github.com/gomarkdown/markdown/parser"
 	"github.com/gorilla/mux"
 	"github.com/gorilla/sessions"
 	idx "github.com/okta/okta-idx-golang"
@@ -107,6 +109,7 @@ func (s *Server) Run() {
 	r.HandleFunc("/terms", s.TCHandler).Methods("GET")
 	r.HandleFunc("/tenant", s.TenantHandler).Methods("GET")
 	r.HandleFunc("/docs", s.DocHandler).Methods("GET")
+	r.HandleFunc("/faq", s.FAQHandler).Methods("GET")
 
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./templates/static/"))))
 
@@ -397,6 +400,34 @@ func (s *Server) getProfileData(r *http.Request) map[string]string {
 	}
 
 	return m
+}
+
+func (s *Server) FAQHandler(w http.ResponseWriter, r *http.Request) {
+
+	data := struct {
+		Profile         map[string]string
+		IsAuthenticated bool
+		Output          template.HTML
+	}{
+		Profile:         s.getProfileData(r),
+		IsAuthenticated: s.isAuthenticated(r),
+		Output:          template.HTML(s.faqContent(r)),
+	}
+	w.Header().Set("Content-Type", "text/html")
+	s.tpl.ExecuteTemplate(w, "faq.gohtml", data)
+
+}
+func (s *Server) faqContent(r *http.Request) string {
+	md, err := ioutil.ReadFile("./templates/content/faq.md")
+	if err != nil {
+		panic(err)
+	}
+	extensions := parser.CommonExtensions | parser.AutoHeadingIDs
+	parser := parser.NewWithExtensions(extensions)
+
+	output := string(markdown.ToHTML(md, parser, nil))
+	//fmt.Println(output)
+	return output
 }
 
 //Checks if id token is in it or not and returns true/false
