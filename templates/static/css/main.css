@@ -231,3 +231,16 @@ header .profile-name {
 .card-list .card a:hover .title {
     text-decoration: underline;
 }
+
+.faq > ol > li {
+    max-width: 64rem;
+    margin-bottom: var(--SpaceScale6);
+}
+
+.faq > ol > li p:first-child {
+    font-weight: bold;
+}
+
+.faq > ol > li ul {
+    margin-bottom: var(--SpaceScale2);
+}

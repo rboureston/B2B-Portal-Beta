@@ -1,21 +1,24 @@
-## General
+## Frequently asked questions
 
   
  1. What are the new capabilities available with the Okta Sign-In Widget Beta program?
  
     As part of this Beta program, Okta is introducing four product capabilities with improved accessibility. The four capabilities are:
-        * Sign Up for New Users
-        * Sign In Users
-        * Reset Password
-        * Unlock Account
+
+    * Sign Up for New Users
+    * Sign In Users
+    * Reset Password
+    * Unlock Account
+
     The following factors may be enabled to complete the above four capabilities. Those seven factors are:
-        * Email
-        * Password
-        * Phone (SMS/Voice)
-        * Okta Verify App
-        * Google Authenticator
-        * WebAuthn (fingerprint/face recognition)
-        * Security Question
+
+    * Email
+    * Password
+    * Phone (SMS/Voice)
+    * Okta Verify App
+    * Google Authenticator
+    * WebAuthn (fingerprint/face recognition)
+    * Security Question
 
   
 
@@ -26,6 +29,7 @@
   
 
 3. How much time do I have to test and give feedback?
+
     The Beta program will run until Oct 31, 2022. As a Beta participant, you have until then to test through all the scenarios and share feedback.
 
   
@@ -54,6 +58,6 @@
 
 8. When will I be able to use this Okta’s Sign-In Widget in my production environment?
     
-    Okta’s Sign-In Widget product is scheduled to move to “LImited Early Access” availability by February of 2023. At that time, you will be able to use all of the latest capabilities available with Okta’s Sign-In Widget in your production environment. As always with any product roadmap, timelines are tentative and subject to change.
+    Okta’s Sign-In Widget product is scheduled to move to “Limited Early Access” availability by February of 2023. At that time, you will be able to use all of the latest capabilities available with Okta’s Sign-In Widget in your production environment. As always with any product roadmap, timelines are tentative and subject to change.
 
     Note: Timelines for “Limited Early Access” only apply to customers based in the United States. For all other customers, please see future product roadmap updates or reach out to your CSM to get the latest timelines.
