@@ -102,6 +102,11 @@ p {
     margin-top: 0;
 }
 
+ul,
+ol {
+    margin-top: 0;
+}
+
 a,
 a:visited {
     color: var(--ColorPaletteBlue500);
@@ -110,6 +115,28 @@ a:visited {
 
 a:hover {
     text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+table th,
+table td {
+    vertical-align: top;
+    border-bottom: 1px solid var(--ColorPaletteNeutral100);
+}
+
+table th {
+    padding: var(--SpaceScale2);
+    text-align: left;
+    font-size: var(--FontSizeCaption);
+    background-color: var(--ColorPaletteNeutral100);
+}
+
+table td {
+    padding: var(--SpaceScale2);
 }
 
 /* Components */
@@ -230,6 +257,65 @@ header .profile-name {
 
 .card-list .card a:hover .title {
     text-decoration: underline;
+}
+
+nav.tabs ul {
+    display: flex;
+    list-style: none;
+    margin: 0 0 var(--SpaceScale6) 0;
+    padding: 0;
+    border-bottom: 1px solid var(--ColorPaletteNeutral200);
+}
+
+nav.tabs ul li .tab-link {
+    appearance: none;
+    margin: 0 var(--SpaceScale4) -1px 0;
+    padding: var(--SpaceScale3) 0;
+    font-family: 'Public Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen-Sans', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 'Noto Sans Arabic', sans-serif;
+    font-size: 1rem;
+    color: var(--ColorTextSub);
+    border: 0;
+    background: none;
+}
+
+nav.tabs ul li .tab-link:hover {
+    color: var(--ColorPaletteBlue500);
+}
+
+nav.tabs ul li .tab-link.active {
+    font-weight: bold;
+    color: var(--ColorTextBody);
+    border-bottom: 3px solid var(--ColorPaletteBlue500);
+}
+
+.what-to-test th,
+.what-to-test td {
+    width: 33%;
+}
+
+.what-to-test table li {
+    margin-bottom: var(--SpaceScale0);
+}
+
+.what-to-test .scenario {
+    display: flex;
+    align-items: flex-start;
+    max-width: 36ch;
+}
+
+.what-to-test .scenario span {
+    margin-right: var(--SpaceScale2);
+}
+
+.what-to-test .scenario .label {
+    position: relative;
+    top: calc(var(--SpaceScale0) * -1);
+}
+
+.label {
+    padding: var(--SpaceScale0) var(--SpaceScale1);
+    background-color: var(--ColorPaletteNeutral100);
+    border-radius: 4px;
 }
 
 .faq > ol > li {
