@@ -5,11 +5,289 @@
 <div class="container">
     {{if .IsAuthenticated}}
         {{template "sidebar" .}}
-        <div class="col-md-10 col-sm-8 main-content" >
+        <div class="col-md-10 col-sm-8 main-content what-to-test">
             <!--Main content code to be written here -->
             <h2>What to test</h2>
-            <p>Coming soon</p>
+            <nav class="tabs">
+                <ul>
+                    <li><button class="tab-link active" data-tab-index="0" tabindex="0">Sign in</button></li>
+                    <li><button class="tab-link" data-tab-index="1" tabindex="0">Sign up</button></li>
+                    <li><button class="tab-link" data-tab-index="2" tabindex="0">Reset password</button></li>
+                    <li><button class="tab-link" data-tab-index="3" tabindex="0">Unlock account</button></li>
+                    <li><button class="tab-link" data-tab-index="4" tabindex="0">Customize branding</button></li>
+                    <li><button class="tab-link" data-tab-index="5" tabindex="0">Verify color contrast</button></li>
+                </ul>
+            </nav>
+            <div class="tabs-wrapper">
+
+                <div class="tab-content" data-tab-index="0">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">1</span>
+                                    <span>Complete sign in with each verification option using only a keyboard and screen reader</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Enter a username</li>
+                                    <li>Enter password</li>
+                                    <li>Verify with one or more authenticators:</li>
+                                    <ul>
+                                        <li>Okta Verify</li>
+                                        <li>Google Authenticator</li>
+                                        <li>Phone SMS/Voice Call</li>
+                                        <li>Biometric</li>
+                                        <li>Security Question</li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td>
+                                User is successfully taken to the Okta End-user Dashboard
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" data-tab-index="1" style="display:none;">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">2</span>
+                                    <span>Complete sign up with each verification option using only a keyboard and screen reader</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Enter an email address</li>
+                                    <li>Enter the first name</li>
+                                    <li>Enter the last name</li>
+                                    <li>Set up one or more authenticators:</li>
+                                    <ul>
+                                        <li>Email</li>
+                                        <li>Password</li>
+                                        <li>Google Authenticator</li>
+                                        <li>Phone SMS/Voice Call</li>
+                                        <li>Biometric</li>
+                                        <li>Security Question</li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td>
+                                User signed up successfully and taken to the Okta End-user Dashboard
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" data-tab-index="2" style="display:none;">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">3</span>
+                                    <span>Complete reset password with each verification option using only a keyboard and screen reader</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Enter the email address</li>
+                                    <li>Send yourself an email</li>
+                                    <li>Verify your email</li>
+                                    <ul>
+                                        <li>Enter a code or click the Reset Password link in your email</li>
+                                    </ul>
+                                    <li>Create a new password</li>
+                                    <li>Verify with one or more authenticators:</li>
+                                    <ul>
+                                        <li>Okta Verify</li>
+                                        <li>Google Authenticator</li>
+                                        <li>Phone SMS/Voice Call</li>
+                                        <li>Biometric</li>
+                                        <li>Security Question</li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>User's password is successfully changed and user is taken to the Okta End-user Dashboard</li>
+                                    <li>User is unable to sign in with the old password</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" data-tab-index="3" style="display:none;">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">4</span>
+                                    <span>Complete unlock account with each verification option using only a keyboard and screen reader</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Enter username or email</li>
+                                    <li>Select an authenticator:</li>
+                                    <ul>
+                                        <li>Email</li>
+                                        <li>Okta Verify</li>
+                                        <li>Phone</li>
+                                    </ul>
+                                    <li>Verify with another authenticator:</li>
+                                    <ul>
+                                        <li>Phone</li>
+                                        <li>Email</li>
+                                        <li>Biometric</li>
+                                        <li>Security Question</li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>User's account is successfully unlocked</li>
+                                    <li>User can sign in with the correct password</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" data-tab-index="4" style="display:none;">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">5</span>
+                                    <span>Change primary and secondary colors</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>As an admin, sign in to the Admin Console</li>
+                                    <ul>
+                                        <li>Go to Customizations > Branding</li>
+                                        <li>Under Theme, change the primary and secondary colors and save</li>
+                                            <ul>
+                                                <li>The primary color chosen should have a contrast ratio of at least 4.55:1 against white</li>
+                                            </ul>
+                                        <li>Click to edit Okta-hosted Sign-In Page, then select the "Solid background" style and publish</li>
+                                    </ul>
+                                    <li>As an end-user, go to the sign-in page</li>
+                                </ul>
+                            </td>
+                            <td>
+                                Colors selected appear in the sign-in experience
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">6</span>
+                                    <span>Upload branding assets</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>As an admin, sign in to the Admin Console</li>
+                                    <ul>
+                                        <li>Go to Customizations > Branding</li>
+                                        <li>Under Theme, change the logo, favicon, and background image and save</li>
+                                        <li>Click to edit Okta-hosted Sign-In Page, then select the "Image background" style and publish</li>
+                                    </ul>
+                                    <li>As an end-user, go to the sign-in page</li>
+                                </ul>
+                            </td>
+                            <td>
+                                Assets uploaded appear in the sign-in experience
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="tab-content" data-tab-index="5" style="display:none;">
+                    <table>
+                        <tr>
+                            <th>Scenario</th>
+                            <th>Steps</th>
+                            <th>Expected result</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="scenario">
+                                    <span class="label">7</span>
+                                    <span>Check color contrast ratio of sign in, sign up, reset password, and unlock account screens using the WCAG 2.1 AA tools</span>
+                                </div>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Test the screens with:</li>
+                                    <ul>
+                                        <li><a href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd">Axe Extension</a></li>
+                                        <li><a href="https://developer.chrome.com/docs/devtools/accessibility/reference/">Chrome Tools</a></li>
+                                        <li>Any tools <a href="https://www.w3.org/WAI/ER/tools/">listed by W3C</a></li>
+                                    </ul>
+                                </ul>
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>WCAG 2.1 AA contrast ratios pass if the theme's primary color is the default or has a contrast ratio of at least 4.55:1 against white</li>
+                                    <li>Primary colors with a ratio less than 4.55:1 are unsupported and may have undesirable results</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
         </div>
+        <script>
+            $(document).ready(function () {
+                $('.tab-link').on('click keypress', function (event) {
+                    if ((event.type === "click" || event.type === "keypress" && event.which === 13)) {
+                        var tabToActivate = $(this).data("tab-index");
+                        $('.tab-link').removeClass('active');
+                        $(".tabs-wrapper .tab-content").each(function () {
+                            if($(this).data("tab-index") == tabToActivate) {
+                                $(".tab-content").hide();
+                                $(this).show();
+                                return;
+                            }
+                        });
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        </script>
     {{else}}
         {{template "unauthenticated" .}}
     {{end}}
