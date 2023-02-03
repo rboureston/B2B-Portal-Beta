@@ -1,5 +1,5 @@
 ## B2B Portal Beta
-This is the application that runs the Sign-In Widget Beta Portal. 
+This is the application that runs the B2B Beta Portal. 
 
 ## Running the Application
 
@@ -19,7 +19,7 @@ okta:
 
 * Clone the repo
 ```
-  git clone dmahalingam-okta/siw-beta-portal
+  git clone rboureston/B2B-Portal-Beta
   cd beta
 ```
 
