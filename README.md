@@ -1,9 +1,5 @@
-## Sign-In Widget Beta Portal
+## B2B Portal Beta
 This is the application that runs the Sign-In Widget Beta Portal. 
-
-## Pre-Requisites
-
-* Install Go
 
 ## Running the Application
 
